@@ -1,0 +1,191 @@
+#include <Windows.h>
+
+HWND &ReturnOneDHWND();
+HWND &ReturnTwoDHWND();
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!MAIN MENU DEFINIES!!!!!!!!!!!!!!
+
+#define IDB_CREATE2D			400		// button to create 2d sim
+#define IDB_CREATE1D			401		// button to create 1d sim
+#define IDB_CLOSEPROGRAM		403
+
+
+
+//!!!!!!!!!!!!!!!!!!1 ONE DIMENSIONAL WAVE MENU DEFINES !!!!!!!!!!!!!!!!!!
+#define IDB_CREATE1DSOURCE      500
+#define IDB_CREATEPLOT			501
+#define IDB_OPENTUTORIAL1D		502	
+#define IDB_1DADVANCEDOPTIONS   503
+
+#define IDE_WAVESPEEDEDIT       510
+#define IDS_WAVESPEEDTEXT       511
+#define IDB_SAVEWAVESPEED       512
+
+// axis limits!!
+#define IDE_LXAXISLIMITS1D      520
+#define IDE_HXAXISLIMITS1D      522
+#define IDS_XAXISTEXT1D			521
+
+
+#define IDE_LYAXISLIMITS1D      525
+#define IDE_HYAXISLIMITS1D      526
+#define IDS_YAXISTEXT1D			527
+
+// track bar related stuff
+#define IDS_STIMETRACKBAR       550
+#define IDS_STIMETEXT			551
+
+#define IDS_ETIMETRACKBAR       554
+#define IDS_ETIMETEXT			555
+
+
+#define IDS_SIMSPEEDTRACKBAR    557
+#define IDS_SIMSPEEDTEXT        558
+
+
+// DIALOG BOX TO CREATE 1D WAVE SOURCE
+#define IDD_1DWAVEDIALOG        560
+#define IDS_WAVELETTERTEXT		565
+
+#define IDS_ENTERAMP			566
+#define IDE_ENTERAMP			567
+
+#define IDS_ENTERXSTART			568
+#define IDE_ENTERXSTART			569
+
+#define IDS_ENTERFREQ			570
+#define IDE_ENTERFREQ			571
+
+#define IDS_PHASECONST			580
+#define IDT_PHASECONSTTRACK     581
+
+
+#define IDB_SAVE1DWAVESOURCE		1200
+#define IDB_CANCLE1DWAVESOURCE		1201
+
+#define IDC_NEGATIVECHECKBOX		-2345
+
+
+// this is a defined message that we send to update the wave source labels
+#define ID_MESSAGE_UPDATEONED	1300
+
+#define ASOURCEAMP				1310
+#define ASOURCEFREQ				1311	
+
+#define BSOURCEAMP				1315
+#define BSOURCEFREQ				1316
+
+#define CSOURCEAMP				1320
+#define CSOURCEFREQ				1321
+
+
+#define DSOURCEAMP				1325
+#define DSOURCEFREQ				1326
+
+
+#define IDB_EDITWAVESOURCEA		1350
+#define IDB_EDITWAVESOURCEB		1351
+#define IDB_EDITWAVESOURCEC		1352
+#define IDB_EDITWAVESOURCED		1353
+
+#define IDC_INCLUDEA1D			1400
+#define IDC_INCLUDEB1D			1401
+#define IDC_INCLUDEC1D			1402
+#define IDC_INCLUDED1D			1403
+
+
+
+
+
+
+
+
+// TWO D WAVE MENU DEFINES!!!!!!!!!!!!!!!!!
+
+//!!!!!!!!!!!!!!!!!!1 two DIMENSIONAL WAVE MENU DEFINES !!!!!!!!!!!!!!!!!!
+#define IDB_CREATE2DSOURCE      4500
+#define IDB_CREATEPLOT2			4501
+#define IDB_OPENTUTORIAL2D		4502	
+#define IDB_2DADVANCEDOPTIONS   4503
+
+#define IDE_WAVESPEEDEDIT2       4510
+#define IDS_WAVESPEEDTEXT2       4511
+#define IDB_SAVEWAVESPEED2       4512
+
+// axis limits!!
+#define IDE_LXAXISLIMITS2D      4520
+#define IDE_HXAXISLIMITS2D      4522
+#define IDS_XAXISTEXT2D			4521
+
+
+#define IDE_LYAXISLIMITS2D      4525
+#define IDE_HYAXISLIMITS2D      4526
+#define IDS_YAXISTEXT2D			4527
+
+// track bar related stuff
+#define IDS_STIMETRACKBAR2       4550
+#define IDS_STIMETEXT2			4551
+
+#define IDS_ETIMETRACKBAR2      4554
+#define IDS_ETIMETEXT2			4555
+
+
+#define IDS_SIMSPEEDTRACKBAR2    4557
+#define IDS_SIMSPEEDTEXT2        4558
+
+
+// DIALOG BOX TO CREATE 1D WAVE SOURCE
+#define IDD_2DWAVEDIALOG        4560
+#define IDS_WAVELETTERTEXT2		4565
+
+#define IDS_ENTERAMP2			4566
+#define IDE_ENTERAMP2			4567
+
+#define IDS_ENTERXSTART2		4568
+#define IDE_ENTERXSTART2		4569
+#define IDE_ENTERYSTART2		1234555
+
+#define IDS_ENTERFREQ2			4570
+#define IDE_ENTERFREQ2			4571
+
+#define IDS_PHASECONST2			4580
+#define IDT_PHASECONSTTRACK2     4581
+
+
+#define IDB_SAVE2DWAVESOURCE		4200
+#define IDB_CANCLE2DWAVESOURCE		4201
+
+
+// this is a defined message that we send to update the wave source labels
+#define ID_MESSAGE_UPDATETWOD	8300
+
+#define ASOURCEAMP2				8310
+#define ASOURCEFREQ2			8311	
+
+#define BSOURCEAMP2				8315
+#define BSOURCEFREQ2				8316
+
+#define CSOURCEAMP2				8320
+#define CSOURCEFREQ2				8321
+
+
+#define DSOURCEAMP2				8325
+#define DSOURCEFREQ2				8326
+
+
+#define IDB_EDITWAVESOURCEA2		8350
+#define IDB_EDITWAVESOURCEB2		8351
+#define IDB_EDITWAVESOURCEC2		8352
+#define IDB_EDITWAVESOURCED2		8353
+
+#define IDC_INCLUDEA2D			8400
+#define IDC_INCLUDEB2D			8401
+#define IDC_INCLUDEC2D			8402
+#define IDC_INCLUDED2D			8403
+
+#define IDC_INCLUDERADIALDAMP   8743
+#define IDC_INCLUDETIMEDAMP     8744
+
